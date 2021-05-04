@@ -1,0 +1,1 @@
+The game Rock Paper Scissors is built using JavaScript. The game is played from the console. 
