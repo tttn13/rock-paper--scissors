@@ -1,0 +1,100 @@
+body {
+    background-color: pink;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 200px 50px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 4.5em;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+#buttons > button {
+    display: block;
+    margin: 10px;
+    width: 20vw;
+    height: 10vh;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1.8em;
+    border: 4px solid;
+    word-wrap: break-word;
+}
+
+#buttons > button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 20px gray;
+}
+
+#buttons > input {
+    flex-grow: 8;
+    border: 4px solid;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+#reset {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.8em;
+    width: 30%;
+    align-self: center;
+    border: 4px solid;
+    height: 10vh;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+#scores {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5em;
+    white-space: pre-line;
+}
+
+#winner {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 3em;
+}
+
+@media screen and (max-width: 500px){
+    body {
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    #buttons {
+        font-size: 0.8em;   
+    }
+
+    #buttons > button {
+        width: 100%;
+    }
+
+    #scores {
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 900px){
+    #buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
