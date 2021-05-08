@@ -52,15 +52,19 @@ function gameInit() {
             game(button.id);
             displayScore(playerScore);
             if (playerScore == 5) {
-                displayWinner("Player");
+                displayWinner(getUserName());
             } else if (computerScore == 5) {
                 displayWinner("Computer");
             }  
         }) 
     })
 
-    var resetButton = document.querySelector('input[type="button"]');
+    var resetButton = document.getElementById('reset');
     resetButton.addEventListener('click', restartGame);
+
+     document.querySelector('#buttons').style.display = 'none';
+     var startButton = document.getElementById('enter');
+     startButton.addEventListener('click', startGame);
 }
 
 function resetState(){
@@ -87,8 +91,9 @@ function game(player) {
 }
 
 function displayScore(playerScore) {
+    userName = getUserName();
     const finalResult = document.querySelector('#scores');
-    finalResult.textContent = ` Player score is : ${playerScore} \r\n
+    finalResult.textContent = ` ${userName} score is : ${playerScore} \r\n
                                 Computer score is: ${computerScore}`;
 }
 
@@ -103,7 +108,15 @@ function restartGame() {
     resetState();
 }
 
+function getUserName() {
+    return document.getElementById('userName').value;   
+}
 
+function startGame() {
+    if (getUserName().length > 0) {
+        document.querySelector('#userData').style.display = 'none';
+        document.querySelector('#buttons').style.display = 'flex';
+    } 
+}
 
 gameInit();
-

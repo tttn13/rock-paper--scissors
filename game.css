@@ -55,6 +55,27 @@ h1 {
     font-weight: bold;
 }
 
+#userData{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    font-size: 1.8em;
+}
+
+#userData > input {
+    width: 25vw;
+    height: 3vh;
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace;
+    align-self: center;
+}
+
+#enter {
+    margin: 12px;
+    width: 10vw;
+    align-self: center;
+    cursor: pointer;
+}
 
 #scores {
     text-align: center;
