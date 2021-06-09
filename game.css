@@ -1,8 +1,10 @@
 body {
-    background-color: pink;
+    background-color: rgb(94, 94, 201);
     font-family: 'Courier New', Courier, monospace;
     margin: 200px 50px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
@@ -58,22 +60,31 @@ h1 {
 #userData{
     display: flex;
     flex-direction: column;
-    align-self: center;
+    align-items: center;
+    justify-content: center;
     font-size: 1.8em;
 }
 
 #userData > input {
-    width: 25vw;
-    height: 3vh;
-    font-size: 1em;
+    width: 10em;
+    height: 3em;
+    font-size: 0.8em;
     font-family: 'Courier New', Courier, monospace;
-    align-self: center;
+    padding: 5px;
+    text-align: center;
+    margin: 10px;
+}
+
+#userData #userName {
+    width: 18em;
+    border-radius: 25px;
+    border:none;
+    outline: none;
 }
 
 #enter {
-    margin: 12px;
-    width: 10vw;
-    align-self: center;
+    border-radius: 25px;
+    border: solid black;
     cursor: pointer;
 }
 
